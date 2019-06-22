@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public struct TimedPose
 {
@@ -33,6 +34,9 @@ public class RecordPlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform rightHand;
 
+    [SerializeField]
+    private string myName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,31 @@ public class RecordPlayerMovement : MonoBehaviour
     public void StopRecording()
     {
         isRecording = false;
+        SaveAsFile(myName);
+    }
+
+    string ConvertToString(TimedPose pose)
+    {
+        string line = pose.elapsedTime + ", " + pose.headPosition.x + ", " +
+            pose.headPosition.y + ", " + pose.headPosition.z + ", " +
+            pose.headRotation.w + ", " + pose.headRotation.x + ", " + pose.headRotation.y + ", " + pose.headRotation.z + ", " +
+            pose.leftHandPosition.x + ", " + pose.leftHandPosition.y + ", " + pose.leftHandPosition.z + ", " +
+            pose.leftHandRotation.w + ", " + pose.leftHandRotation.x + ", " + pose.leftHandRotation.y + ", " + pose.leftHandRotation.z + ", " +
+            pose.rightHandPosition.x + ", " + pose.rightHandPosition.y + ", " + pose.rightHandPosition.z + ", " +
+            pose.rightHandRotation.w + ", " + pose.rightHandRotation.x + ", " + pose.rightHandRotation.y + ", " + pose.rightHandRotation.z + ";";
+        return line;
+    }
+
+    void SaveAsFile(string filename)
+    {
+        StreamWriter writer = new StreamWriter("Assets/Resources/"+filename+".txt", true);
+
+        //List<string> lines = new List<string>();
+        foreach(TimedPose pose in posesCollected)
+        {
+            writer.WriteLine(ConvertToString(pose));
+        }
+        writer.Close();
     }
     // Update is called once per frame
     void Update()
