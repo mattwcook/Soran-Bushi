@@ -28,6 +28,9 @@ public class DancePlayback : MonoBehaviour
 
     private List<TimedPose> poses;
 
+    [SerializeField]
+    private float timeScale = 1f;
+
     // Start is called before the first frame update
     public void ChangeName(string nm)
     {
@@ -52,11 +55,11 @@ public class DancePlayback : MonoBehaviour
                     TimedPose t = new TimedPose();
                     t.elapsedTime = float.Parse(vals[0]);
                     t.headPosition = new Vector3(float.Parse(vals[1]), float.Parse(vals[2]), float.Parse(vals[3]));
-                    t.headRotation = new Quaternion(float.Parse(vals[5]), float.Parse(vals[6]), float.Parse(vals[7]), float.Parse(vals[8]));
+                    t.headRotation = new Quaternion(float.Parse(vals[4]), float.Parse(vals[5]), float.Parse(vals[6]), float.Parse(vals[7]));
                     t.leftHandPosition = new Vector3(float.Parse(vals[8]), float.Parse(vals[9]), float.Parse(vals[10]));
-                    t.leftHandRotation = new Quaternion(float.Parse(vals[12]), float.Parse(vals[13]), float.Parse(vals[14]), float.Parse(vals[11]));
+                    t.leftHandRotation = new Quaternion(float.Parse(vals[11]), float.Parse(vals[12]), float.Parse(vals[13]), float.Parse(vals[14]));
                     t.rightHandPosition = new Vector3(float.Parse(vals[15]), float.Parse(vals[16]), float.Parse(vals[17]));
-                    t.rightHandRotation = new Quaternion(float.Parse(vals[19]), float.Parse(vals[10]), float.Parse(vals[21]), float.Parse(vals[18]));
+                    t.rightHandRotation = new Quaternion(float.Parse(vals[18]), float.Parse(vals[19]), float.Parse(vals[20]), float.Parse(vals[21]));
 
                     poses.Add(t);
                 }
@@ -87,13 +90,23 @@ public class DancePlayback : MonoBehaviour
 
     }
 
+    public void PausePlayback()
+    {
+        isPlayback = false;
+    }
+
+    public void ResumePlayback()
+    {
+        isPlayback = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
 
         if(isPlayback)
         {
-            if(timeSinceStart > poses[playbackIndex].elapsedTime)
+            if(poses != null && timeSinceStart > poses[playbackIndex].elapsedTime)
             {
                 playbackIndex += 1;
             }
@@ -111,7 +124,7 @@ public class DancePlayback : MonoBehaviour
                 rightHand.localPosition = t.rightHandPosition;
                 rightHand.localRotation = t.rightHandRotation;
 
-                timeSinceStart += Time.deltaTime;
+                timeSinceStart += Time.deltaTime * timeScale;
             }
             else
             {
