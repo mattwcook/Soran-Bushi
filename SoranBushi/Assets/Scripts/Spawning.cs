@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Spawning : MonoBehaviour
 {
-    public GameManager manager;
-    public GameObject spawnPointsParent;
+    GameObject spawnPointsParent;
     public Vector2 spawnAreaDimensions;
     public float minDancerDistance;
     int dancersNumber;
@@ -17,26 +16,41 @@ public class Spawning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //dancersNumber = manager.numberOfDancers;
+        spawnPointsParent = transform.Find("Spawn Points Parent").gameObject;
+        dancersNumber = GameManager.Instance.GetNumberOfDancers();
         for (int i = 0; i<= dancersNumber; i++)
         {
-            randX = Random.Range(-spawnAreaDimensions.x / 2, spawnAreaDimensions.x / 2);
-            randZ = Random.Range(-spawnAreaDimensions.y / 2, spawnAreaDimensions.y / 2);
-            spawnPosition = new Vector3(randX, 0.0f, randZ);
-            foreach (Transform T in spawnPointsParent.transform)
-            {
-                //if (T - new Vector3())
-            }
-            //spawnPoint = new GameObject();
-            spawnPoint.transform.SetParent(spawnPointsParent.transform);
-
-            spawnPoint.transform.localPosition = new Vector3();
+            GetNewSpawnPoint();
         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    void GetNewSpawnPoint()
+    {
+        randX = Random.Range(-spawnAreaDimensions.x / 2, spawnAreaDimensions.x / 2);
+        randZ = Random.Range(-spawnAreaDimensions.y / 2, spawnAreaDimensions.y / 2);
+        spawnPosition = new Vector3(randX, 0.0f, randZ);
+        if ((spawnPosition - transform.position).magnitude < minDancerDistance)
+        {
+            GetNewSpawnPoint();
+        }
+        foreach (Transform T in spawnPointsParent.transform)
+        {
+            if ((T.position - spawnPosition).magnitude < minDancerDistance)
+            {
+                GetNewSpawnPoint();
+            }
+            else
+            {
+                spawnPoint = new GameObject();
+                spawnPoint.transform.SetParent(spawnPointsParent.transform);
+                spawnPoint.transform.localPosition = spawnPosition;
+            }
+        }
     }
 }
