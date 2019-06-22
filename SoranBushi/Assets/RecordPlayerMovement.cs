@@ -60,11 +60,11 @@ public class RecordPlayerMovement : MonoBehaviour
     {
         string line = pose.elapsedTime + ", " + pose.headPosition.x + ", " +
             pose.headPosition.y + ", " + pose.headPosition.z + ", " +
-            pose.headRotation.w + ", " + pose.headRotation.x + ", " + pose.headRotation.y + ", " + pose.headRotation.z + ", " +
+            pose.headRotation.x + ", " + pose.headRotation.y + ", " + pose.headRotation.z + ", " + pose.headRotation.w + ", " +
             pose.leftHandPosition.x + ", " + pose.leftHandPosition.y + ", " + pose.leftHandPosition.z + ", " +
-            pose.leftHandRotation.w + ", " + pose.leftHandRotation.x + ", " + pose.leftHandRotation.y + ", " + pose.leftHandRotation.z + ", " +
+            pose.leftHandRotation.x + ", " + pose.leftHandRotation.y + ", " + pose.leftHandRotation.z + ", " + pose.leftHandRotation.w + ", " +
             pose.rightHandPosition.x + ", " + pose.rightHandPosition.y + ", " + pose.rightHandPosition.z + ", " +
-            pose.rightHandRotation.w + ", " + pose.rightHandRotation.x + ", " + pose.rightHandRotation.y + ", " + pose.rightHandRotation.z + ";";
+            pose.rightHandRotation.x + ", " + pose.rightHandRotation.y + ", " + pose.rightHandRotation.z + ", " + pose.rightHandRotation.w + ";";
         return line;
     }
 
@@ -87,10 +87,12 @@ public class RecordPlayerMovement : MonoBehaviour
             if (isRecording)
             {
                 StopRecording();
+                Debug.Log("stopped recording: " + myName);
             }
             else
             {
                 StartRecording();
+                Debug.Log("starting a recording with: " + myName);
             }
         }
         if (isRecording)
