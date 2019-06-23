@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{291dc96e-1b73-4d85-93f0-dcce01a85de2}">
+        <property name="assetPath">
+            <value>318898__ignat__igni0530.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>52.98793650793651</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{205accbf-eaa3-4c85-b477-31f36f28500d}</destination>
+        </relationship>
+    </object>
+</objects>

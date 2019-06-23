@@ -54,7 +54,8 @@ MonoBehaviour:
     Value: 256
   - Platform: 2
     Value: 32
-  Plugins: []
+  Plugins:
+  - OculusSpatializerFMOD
   MasterBank: Master Bank
   Banks:
   - Music

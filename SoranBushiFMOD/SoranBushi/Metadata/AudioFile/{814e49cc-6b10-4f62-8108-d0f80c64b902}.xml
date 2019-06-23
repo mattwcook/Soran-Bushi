@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{814e49cc-6b10-4f62-8108-d0f80c64b902}">
+        <property name="assetPath">
+            <value>353416__squashy555__seagull-on-beach.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>33.619591836734692</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{205accbf-eaa3-4c85-b477-31f36f28500d}</destination>
+        </relationship>
+    </object>
+</objects>

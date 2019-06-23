@@ -81,7 +81,6 @@ public class DancePlayback : MonoBehaviour
                 }
             }
 
-            Debug.Log("poses count: " + poses.Count);
         }
         else
         {

@@ -39,6 +39,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 744
   Exists: 1
+--- !u!114 &-6690605455993888012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/StreetSounds
+  guid: 62e7be02c7cd7d44830658a4336128b4
+  Banks:
+  - {fileID: -186541221127236219}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &-6028838907714675359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,6 +78,22 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &-5467260951161369528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TransitionGameMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &-3686590298304610806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,9 +172,25 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 1749684367987902648}
+  - {fileID: 4564694504379629248}
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &-247518259027900308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TransitionGameMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-186541221127236219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,11 +204,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: D:\BrilliantRepos\SoranBushi\Soran-Bushi\SoranBushiFMOD\SoranBushi\Build\Desktop\Music.bank
-  lastModified: 636968369215960298
+  lastModified: 636968579158640418
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3186016
+    Value: 5223808
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -174,10 +228,36 @@ MonoBehaviour:
   - {fileID: -186541221127236219}
   EditorEvents:
   - {fileID: -1637001777167412902}
+  - {fileID: 851688994969180011}
+  - {fileID: 2665416027125765566}
+  - {fileID: -6690605455993888012}
+  - {fileID: 7454180482228216814}
   MasterBankRef: {fileID: 2043508231881744421}
   StringsBankRef: {fileID: 8609821959409213027}
-  stringsBankWriteTime: 636968369214194965
+  stringsBankWriteTime: 636968579157702917
   cacheVersion: 2
+--- !u!114 &851688994969180011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OceanSounds
+  guid: 1d5b64dc26609041a2cc24e06ec710eb
+  Banks:
+  - {fileID: -186541221127236219}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &1204143350958711769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,12 +308,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\BrilliantRepos\SoranBushi\Soran-Bushi\SoranBushiFMOD\SoranBushi\Build\Desktop\Master
     Bank.bank
-  lastModified: 636968369214155103
+  lastModified: 636968579157663032
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 12192
   Exists: 1
+--- !u!114 &2665416027125765566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Seagull
+  guid: 54d1cda8d7c7464a964651f050523b29
+  Banks:
+  - {fileID: -186541221127236219}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &4164773133873945087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TransitionGameMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &4564694504379629248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TransitionGameMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &5213916438636603191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +407,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3186624
   Exists: 1
+--- !u!114 &7454180482228216814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ButtonPress
+  guid: 84e26638890c9c4b9b77ef8471bf8a96
+  Banks:
+  - {fileID: -186541221127236219}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &8141075916437015807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,9 +481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: ..\SoranBushiFMOD\SoranBushi\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636968369214194965
+  lastModified: 636968579157702917
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 744
+    Value: 932
   Exists: 1

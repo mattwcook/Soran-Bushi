@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{c60f4c59-7b40-4349-996f-dd169f2c9466}">
+        <property name="assetPath">
+            <value>471481__nicolas-escobar-espinosa__32-gaviotas.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>3.2737868480725623</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{205accbf-eaa3-4c85-b477-31f36f28500d}</destination>
+        </relationship>
+    </object>
+</objects>
