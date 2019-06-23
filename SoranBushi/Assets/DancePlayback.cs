@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 public class DancePlayback : MonoBehaviour
 {
@@ -30,6 +31,13 @@ public class DancePlayback : MonoBehaviour
 
     [SerializeField]
     private float timeScale = 1f;
+
+    public event EventHandler PlaybackEnded;
+
+    protected virtual void OnPlaybackEnded(EventArgs e)
+    {
+        PlaybackEnded.Invoke(this, e);
+    }
 
     // Start is called before the first frame update
     public void ChangeName(string nm)
@@ -132,6 +140,7 @@ public class DancePlayback : MonoBehaviour
             }
             else
             {
+                OnPlaybackEnded(new EventArgs());
                 StopPlayback();
             }
         }
