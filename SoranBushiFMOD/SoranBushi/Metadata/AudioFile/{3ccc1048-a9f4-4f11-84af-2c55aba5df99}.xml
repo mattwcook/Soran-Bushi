@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{3ccc1048-a9f4-4f11-84af-2c55aba5df99}">
+        <property name="assetPath">
+            <value>eugene_voiceacting.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>34.539682539682538</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{205accbf-eaa3-4c85-b477-31f36f28500d}</destination>
+        </relationship>
+    </object>
+</objects>
