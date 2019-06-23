@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     DancePlayback dancerPrefab;
 
+    [SerializeField]
+    DancePlayback captain;
+
+    [SerializeField]
     List<DancePlayback> dancers;
 
     [FMODUnity.EventRef]
@@ -48,6 +52,8 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        captain.ChangeName("captain");
+
     }
 
     // Update is called once per frame
@@ -61,6 +67,7 @@ public class GameManager : MonoBehaviour
                 dancer.StartPlayback();
                 musicTransition.setValue(1f);
             }
+            captain.StartPlayback();
         }
 
     }

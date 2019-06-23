@@ -12,7 +12,7 @@ public class CaptainStart : MonoBehaviour
     [SerializeField]
     DancePlayback captain;
 
-    private void Update()
+    private void Start()
     {
         voiceActingEvent = FMODUnity.RuntimeManager.CreateInstance(voiceActingEventString);
         voiceActingEvent.start();
