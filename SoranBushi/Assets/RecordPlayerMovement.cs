@@ -70,7 +70,7 @@ public class RecordPlayerMovement : MonoBehaviour
 
     void SaveAsFile(string filename)
     {
-        StreamWriter writer = new StreamWriter("Assets/Resources/"+filename+".txt", true);
+        StreamWriter writer = new StreamWriter("Assets/Resources/"+filename+".txt", false);
 
         //List<string> lines = new List<string>();
         foreach(TimedPose pose in posesCollected)

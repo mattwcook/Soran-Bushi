@@ -40,13 +40,17 @@ public class DancePlayback : MonoBehaviour
         Debug.Log("player found: " + records.name);
         //try to load a file
         //Re-import the file to update the reference in the editor
-        TextAsset asset = Resources.Load<TextAsset>(filename);
+        
+        
+        StreamReader reader = new StreamReader("Assets/Resources/"+filename + ".txt");
+        string asset = reader.ReadToEnd();
+            //Read the text from directly from the test.txt file
 
         //if no file, use the player memory to playback poses
-        if(asset != null && !string.IsNullOrEmpty(asset.text))
+        if (asset != null && !string.IsNullOrEmpty(asset))
         {
             poses = new List<TimedPose>();
-            string[] lines = asset.text.Split(';');
+            string[] lines = asset.Split(';');
             foreach(string line in lines)
             {
                 try
