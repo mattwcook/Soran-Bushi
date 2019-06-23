@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 777683971962720039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.36, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807362892086539641}
   m_RootOrder: 3
@@ -107,6 +107,7 @@ MonoBehaviour:
   leftHand: {fileID: 6760032044579061410}
   rightHand: {fileID: 799812013805931326}
   nameText: {fileID: 2377811575604241182}
+  timeScale: 1
 --- !u!1001 &8107933254485168101
 PrefabInstance:
   m_ObjectHideFlags: 0

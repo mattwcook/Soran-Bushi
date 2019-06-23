@@ -115,7 +115,7 @@ public class DancePlayback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        nameText.transform.LookAt(Camera.main.transform.position);
         if(isPlayback)
         {
             if(poses != null && timeSinceStart > poses[playbackIndex].elapsedTime)
