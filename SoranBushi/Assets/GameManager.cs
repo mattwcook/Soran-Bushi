@@ -18,19 +18,35 @@ public class GameManager : MonoBehaviour
 
     List<DancePlayback> dancers;
 
-    // Start is called before the first frame update
-    void Start()
+    [FMODUnity.EventRef]
+    public string musicEventString = "event:/";
+
+    public FMOD.Studio.EventInstance musicEvent;
+    public FMOD.Studio.ParameterInstance musicTransition;
+
+    PlayerScript player;
+
+    private void Start()
     {
+        musicEvent = FMODUnity.RuntimeManager.CreateInstance(musicEventString);
+        musicEvent.getParameter("TransitionGameMusic", out musicTransition);
+        musicEvent.start();
         Instance = this;
         dancers = new List<DancePlayback>();
         directoryInfo = new DirectoryInfo("Assets/Resources/");
         files = directoryInfo.GetFiles("*.txt").OrderByDescending(p => p.CreationTime).ToArray();
-        foreach(FileInfo file in files)
+
+        player = GameObject.Find("Player").GetComponent<PlayerScript>();
+        foreach (FileInfo file in files)
         {
             //make a dancer for each file
-            DancePlayback dancerInstance = GameObject.Instantiate<DancePlayback>(dancerPrefab, new Vector3((Random.value * 10f) + .3f, 0f, (Random.value * 10f) + .3f), Quaternion.identity);
-            dancerInstance.ChangeName(file.Name.Replace(".txt", ""));
-            dancers.Add(dancerInstance);
+            if(file.Name != "captain.txt")
+            {
+                DancePlayback dancerInstance = GameObject.Instantiate<DancePlayback>(dancerPrefab, player.SpawnLogic.SpawnPointsObject.transform.GetChild(dancers.Count).position, Quaternion.identity);
+                dancerInstance.ChangeName(file.Name.Replace(".txt", ""));
+                dancers.Add(dancerInstance);
+            }
+
         }
     }
 
@@ -43,6 +59,7 @@ public class GameManager : MonoBehaviour
             foreach (DancePlayback dancer in dancers)
             {
                 dancer.StartPlayback();
+                musicTransition.setValue(1f);
             }
         }
 

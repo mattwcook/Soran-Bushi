@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dancerPrefab: {fileID: 1243895068, guid: 842ef1590c33c5345934c0f91de37549, type: 3}
+  musicEventString: event:/GameMusicTransitions

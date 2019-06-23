@@ -36,7 +36,7 @@ public class DancePlayback : MonoBehaviour
 
     protected virtual void OnPlaybackEnded(EventArgs e)
     {
-        PlaybackEnded.Invoke(this, e);
+        PlaybackEnded?.Invoke(this, e);
     }
 
     // Start is called before the first frame update
