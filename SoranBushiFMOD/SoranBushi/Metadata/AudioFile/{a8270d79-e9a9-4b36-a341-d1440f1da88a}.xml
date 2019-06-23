@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{a8270d79-e9a9-4b36-a341-d1440f1da88a}">
+        <property name="assetPath">
+            <value>450755__florianreichelt__waves-of-hawaii.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>92.833333333333329</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{205accbf-eaa3-4c85-b477-31f36f28500d}</destination>
+        </relationship>
+    </object>
+</objects>
