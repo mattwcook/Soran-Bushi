@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void OnApplicationQuit()
+    {
+        player.RecordMovementLogic.StopRecording();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -68,6 +73,9 @@ public class GameManager : MonoBehaviour
                 musicTransition.setValue(1f);
             }
             captain.StartPlayback();
+
+            player.RecordMovementLogic.StartRecording();
+
         }
 
     }

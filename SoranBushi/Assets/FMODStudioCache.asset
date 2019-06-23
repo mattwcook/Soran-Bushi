@@ -1,5 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8598280130277185235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/GameMusicTransitions
+  guid: ad8eefd3d07d054ca05d91fa7942d07c
+  Banks:
+  - {fileID: 2561689476134508084}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6270230201621947018}
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &-8139181309464921283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Workspace\Soran\SoranBushiFMOD\SoranBushi\FakeBuild\Desktop\Master Bank.bank
+  lastModified: 636968911027393704
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12192
+  Exists: 1
 --- !u!114 &-6800510885876299137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +125,28 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &-6350301882124462987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/StreetSounds
+  guid: 62e7be02c7cd7d44830658a4336128b4
+  Banks:
+  - {fileID: 2561689476134508084}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &-6269179531201951196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +185,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &-5641590685060749349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Seagull
+  guid: 54d1cda8d7c7464a964651f050523b29
+  Banks:
+  - {fileID: 2561689476134508084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &-5467260951161369528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +384,28 @@ MonoBehaviour:
   - {fileID: 8475073844106105219}
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &-2005125779021659721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/OceanSounds
+  guid: 1d5b64dc26609041a2cc24e06ec710eb
+  Banks:
+  - {fileID: 2561689476134508084}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &-1857137508416876551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,19 +536,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2372998904873791046}
-  - {fileID: 1583117705281943377}
-  - {fileID: -2631863836541478130}
+  - {fileID: 4731760977903593074}
+  - {fileID: -8139181309464921283}
+  - {fileID: 2561689476134508084}
   EditorEvents:
-  - {fileID: 1259400923993193980}
-  - {fileID: 484976524222332613}
-  - {fileID: 42726030578967456}
-  - {fileID: -2367204639481555175}
-  - {fileID: 1041293351711927630}
-  - {fileID: 4555535521127828287}
-  MasterBankRef: {fileID: 1583117705281943377}
-  StringsBankRef: {fileID: 2372998904873791046}
-  stringsBankWriteTime: 636968897779223324
+  - {fileID: -2005125779021659721}
+  - {fileID: -5641590685060749349}
+  - {fileID: -6350301882124462987}
+  - {fileID: 8453675410378095070}
+  - {fileID: 2958372669741558995}
+  - {fileID: -8598280130277185235}
+  MasterBankRef: {fileID: -8139181309464921283}
+  StringsBankRef: {fileID: 4731760977903593074}
+  stringsBankWriteTime: 636968911027423613
   cacheVersion: 2
 --- !u!114 &42726030578967456
 MonoBehaviour:
@@ -754,6 +862,25 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &2561689476134508084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Workspace\Soran\SoranBushiFMOD\SoranBushi\FakeBuild\Desktop\Music.bank
+  lastModified: 636968911027832529
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 5507904
+  Exists: 1
 --- !u!114 &2665416027125765566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +903,28 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &2958372669741558995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/CaptainVoiceActing
+  guid: 9102a2e98f5f0446bb4402b4cf61b574
+  Banks:
+  - {fileID: 2561689476134508084}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &3433850732751969806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,6 +1056,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &4731760977903593074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: ..\SoranBushiFMOD\SoranBushi\FakeBuild\Desktop\Master Bank.strings.bank
+  lastModified: 636968911027423613
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 980
+  Exists: 1
 --- !u!114 &5213916438636603191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,6 +1095,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12192
   Exists: 1
+--- !u!114 &6270230201621947018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TransitionGameMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &6669683562171874065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,6 +1213,28 @@ MonoBehaviour:
   guid: 84e26638890c9c4b9b77ef8471bf8a96
   Banks:
   - {fileID: 989438812501764357}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &8453675410378095070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ButtonPress
+  guid: 84e26638890c9c4b9b77ef8471bf8a96
+  Banks:
+  - {fileID: 2561689476134508084}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

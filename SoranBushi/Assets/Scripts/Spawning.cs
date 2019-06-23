@@ -54,5 +54,6 @@ public class Spawning : MonoBehaviour
         spawnPoint = new GameObject();
         spawnPoint.transform.SetParent(spawnPointsParent.transform);
         spawnPoint.transform.localPosition = spawnPosition;
+        spawnPoint.transform.position = new Vector3(spawnPoint.transform.position.x, 0f, spawnPoint.transform.position.z);
     }
 }

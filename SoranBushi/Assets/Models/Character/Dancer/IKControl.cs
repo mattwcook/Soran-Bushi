@@ -14,9 +14,17 @@ public class IKControl : MonoBehaviour
     public Transform leftHandObj = null;
     public Transform lookObj = null;
 
+    public GameObject[] hairOptions;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        int hair = UnityEngine.Random.Range(0, hairOptions.Length+1); 
+
+        if(hair < hairOptions.Length)
+        {
+            hairOptions[hair].SetActive(true);
+        }
     }
 
     //a callback for calculating IK

@@ -122,26 +122,35 @@ public class DancePlayback : MonoBehaviour
                 playbackIndex += 1;
             }
 
-            if(playbackIndex < poses.Count)
+            if(poses != null)
             {
-                TimedPose t = poses[playbackIndex];
+                if (playbackIndex < poses.Count)
+                {
+                    TimedPose t = poses[playbackIndex];
 
-                head.localPosition = t.headPosition;
-                head.localRotation = t.headRotation;
+                    head.localPosition = t.headPosition;
+                    head.localRotation = t.headRotation;
 
-                leftHand.localPosition = t.leftHandPosition;
-                leftHand.localRotation = t.leftHandRotation;
+                    leftHand.localPosition = t.leftHandPosition;
+                    leftHand.localRotation = t.leftHandRotation;
 
-                rightHand.localPosition = t.rightHandPosition;
-                rightHand.localRotation = t.rightHandRotation;
+                    rightHand.localPosition = t.rightHandPosition;
+                    rightHand.localRotation = t.rightHandRotation;
 
-                timeSinceStart += Time.deltaTime * timeScale;
+                    timeSinceStart += Time.deltaTime * timeScale;
+                }
+                else
+                {
+                    OnPlaybackEnded(new EventArgs());
+                    StopPlayback();
+                }
+
             }
             else
             {
-                OnPlaybackEnded(new EventArgs());
                 StopPlayback();
             }
+
         }
     }
 }
